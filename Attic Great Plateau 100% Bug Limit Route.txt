@@ -1,0 +1,223 @@
+
+---
+_project:
+  authors:
+    - somerandom_alt
+  description: Great Plateau 100% Bug Limit
+  name: Great Plateau 100% Bug Limit
+  version: 1.0
+
+_route:
+- Before Start:
+  - Set language to German
+
+- Tower:
+  - Leave SoR:
+      coord: [-1038, 1796]
+      icon: location
+      line-color: white
+      comment: Front entrance
+      notes: Get 2 chests in first room
+
+  - Run .dir(SE)
+  - _Weapon<Woodcutter's Axe>:
+      coord: [-931, 1879]
+      comment: Next to Old Man
+      notes: Jump before grabbing to avoid old man cutscene
+ 
+  - Run .dir(E)
+  - _Korok::P10:
+      comment: Lily pads
+  
+  - Swim + Run .dir(E>):
+      coord: [-809, 1887]
+      comment: Zelda cutscene
+
+  - Run .dir(<E)
+  - _Armor<Hylian Trousers>:
+      coord: [-743, 1860]
+      comment: Chest in ruins
+
+  - Run .dir(NE)
+  - Arrows x4:
+      coord: [-637, 1775]
+      comment: Near Boko archers
+
+  - Bokoblin:
+      coord: [-610, 1709]
+      comment: Near tower
+      notes: Sprint + Attack with Axe, take Boko Shield
+
+  - Run .dir(.E)
+  - _Tower::GreatPlateau:
+      icon: tower
+      notes: Split once drop hits slate
+
+- Ja Baij:
+  - Run .dir(N) + FDC:
+      line-color: turquoise
+      notes: Hold fowards after cutscene skip
+  - _Npc::SheikaMale<Old Man>:
+     coord: [-576, 1703]
+     notes: Text option 1-2-2-1
+
+  - Surf + Run .dir(<<S):
+      comment: Avoid guardian cutscene
+  - _Shrine::JaBaij:
+      comment: Bombs shrine
+      notes: Complete casually
+
+- Owa Daim:
+  - _Npc::SheikaMale<Old Man>:
+      line-color: yellow
+      coord: [-461.70, 178.41, 1990.18]
+      comment: Text option 2-1-1-2
+
+  - Run .dir(E)
+  - _Korok::P12:
+      comment: Lift rock under metal door
+      notes: Place bomb under upper left corner of door and detonate
+
+  - Climb + Run .dir(SE):
+      comment: Avoid guardian cutscene
+  - _Korok::P18:
+      comment: Confetti on old man's hut
+
+  - _Shield<Pot Lid>:
+      coord: [-803, 2260]
+      comment: Next to cooking pot
+
+  - Run .dir(SE)
+  - Cut down tree to cross canyon:
+      coord: [-865, 2311]
+      comment: 2 hits with axe
+
+  - Run .dir(.W)
+  - Fire Arrow x5:
+      coord: [-959, 2351]
+      comment: Hidden chest in rock rubble
+      notes: Explode rubble with bomb
+
+  - Run .dir(.E)
+  - Climb to Owa Daim:
+      coord: [-914, 2325]
+      comment: (.link([vod]https://youtube.com/clip/UgkxH9zWOSPhFRiu5cp4t5OQxWq--bzBfOik?si=JaNp3fLu60hKPjh1))
+      notes: Get Rushroom x3
+
+  - _Shrine::OwaDaim:
+      comment: Stasis shrine
+      notes: Complete casually, get Iron Sledgehammer
+
+- Keh Namut:
+  - _Bow<Traveler's Bow>:
+      line-color: cyan
+      coord: [-940, 2324]
+      comment: Under boulder
+      notes: Hit once with sledge .dir(S)
+  
+  - _Shrine::OmanAu:
+      notes: Clear ragdoll glitch in shrine
+      comment: Magnesis shrine
+
+  - _Shrine::OwaDaim:
+      comment: Stasis shrine
+
+  - _Shrine::KehNamut:
+      comment: Cryonis shrine
+
+  - BLSS to Temple of Time
+
+  - .!!(Paraglider):
+      icon: king
+      coord: [-809.33, 263.58, 1964.35]
+      split-type: UserDefined
+
+- Windblight:
+  - Enter Medoh:
+      icon: medoh-enter
+      coord: [-3850.5,-2278.5]
+      comment: (.link([vod]https://youtu.be/Aw14LJhXV-8&t=6449))
+      notes: |
+        1 ancient arrow per cannon. Visual cues: .link([Left-Right]https://cdn.discordapp.com/attachments/293465650540838913/688224174937735188/a3.png), .link([Middle]https://cdn.discordapp.com/attachments/293465650540838913/688224173427785910/a4.png)
+
+  - .boss(Windblight):
+      icon: ganon
+      hide-icon-on-map: true
+      notes: "1-cycle: .rune(Stasis) + Ancient Arrow → 1 FDB body + 4 FDB head"
+
+  - .!!(Revali's Gale):
+      icon: medoh-done
+      split-type: UserDefined
+      line-color: yellow
+      movements:
+          - to: [-3565.625,-1817.375]
+            warp: true
+
+- Thunderblight:
+  - Vah Naboris:
+      icon: naboris-enter
+      coord: [-2754.62, 112.53, 3749.44]
+      comment: (.link([vod]https://youtu.be/Aw14LJhXV-8&t=11408)) .gale()
+      gale: 3
+      hide-icon-on-map: true
+
+  - .boss(Thunderblight):
+      icon: ganon
+      notes: .rune(Stasis), Fire arrows, → 2 GEB body + 1 OmeGEB head
+      hide-icon-on-map: true
+
+  - .!!(Urbosa's Fury):
+      icon: naboris-done
+      line-color: orange
+      split-type: UserDefined
+      movements:
+          - to: [-3772,2851]
+            warp: true
+
+- Fireblight:
+  - Vah Rudania:
+      icon: tots
+      hide-icon-on-map: true
+      comment: (.link([vod]https://youtu.be/Aw14LJhXV-8&t=21567)) .gale()
+      gale: 1
+
+  - .boss(Fireblight):
+      icon: calamity
+      hide-icon-on-map: true
+      notes: AA + .rune(Stasis) → 2 GEB body + 1 OmeGEB head
+
+  - Daruk's Protection:
+      icon: rudania-done
+      split-type: UserDefined
+      movements:
+          - to: [1572.5,-2422.5]
+            warp: true
+
+- Waterblight:
+  - Vah Ruta:
+      icon: ruta-enter
+      coord: [3662.40, 315.66, -175.42]
+      comment: (.link([vod]https://youtu.be/Aw14LJhXV-8&t=15498)) .gale()
+      gale: 1
+
+  - .boss(Waterblight):
+      icon: calamity
+      notes: .rune(Stasis) → 2 GEB (shock arrow) + 1 OmeGEB (AA), all headshots
+      hide-icon-on-map: true
+
+  - Mipha's Grace:
+      icon: ruta-done
+      split-type: UserDefined
+      line-color: "#ff6952"
+      movements:
+          - to: [3283.5,-431]
+            warp: true
+
+- Ganon:
+  - .boss(Ganon):
+      icon: ganon
+      movements:
+          - to: [-254.00, 191.01, -1061.37]
+            away: true
+      split-type: UserDefined
+
